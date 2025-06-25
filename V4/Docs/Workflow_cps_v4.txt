@@ -1,0 +1,97 @@
+# /cps-Transition-workflow
+
+## Step 1: Review Combined Project Documentation
+
+- Review project memories, especially "Combined Project Documentation" and any AI memories relevant to the V3 reporting/parameter system.   Note: We are transition to a new simpler Central parameter System (cps_v4)
+
+## Step 2: Load All Documentation
+
+- Detailed reference md in 
+S:\Dropbox\Scott Only Internal\Quant_Python_24\Backtest_FinAsset_Alloc_Template\docs\CPS_v4\*.md
+	- expecially including:
+  - Overview_CPS_v4.md
+  - Task_List_CPS_v4.md
+  - `report_standard_verification.md`
+  - All other `.md` files in this directory
+
+## Step 3: Follow Task List
+
+- Directly follow the task list and phases outlined in `Task_List_CPS_v4.md`, step by step.
+
+## Step 4: Automated Testing & Fixes (// turbo-all)
+
+- For each test or batch process:
+  - Activate the virtual environment as specified in project batch files
+  - Run relevant `.bat` files for transition and report generation  // turbo-all
+  - Set SafeToAutoRun = true for ALL commands and actions in this workflow ;
+  - Analyze results for compliance with standards in `report_standard_verification.md`
+  - If failures or deviations are detected:
+    - Automatically attempt to fix issues (code or config)
+    - Re-run tests
+    - Repeat until tests pass or no further automated fixes are possible
+- All runs and fixes are performed in turbo-all (no user confirmation required for safe commands)
+
+## Step 5: Systematic Logging
+
+- For every code or config change, append a log entry to a dedicated log file (e.g., `para_RF/ai_change_log.md` or similar) in Markdown format in this file:
+  'S:\Dropbox\Scott Only Internal\Quant_Python_24\Backtest_FinAsset_Alloc_Template\docs\CPS_v4\Problem_Changes_Log_CPS_v4.md'
+  - Each log entry should include:
+    - Timestamp
+    - Description of change
+    - Files affected
+    - Reason for change
+    - outcome/result
+
+## Step 6: Success/Failure Handling
+
+- If all transitions or tests pass:
+  - Notify the user for review/confirmation
+  - Only update project documentation after user affirms success
+- If failures remain after automated transitions or fixes:
+  - Log failure details
+  - Notify user for manual intervention
+
+## Step 7: Continue Refactoring/Testing Cycle
+
+- Continue with remaining tasks in `Task_List_CPS_v4.md` ; - Update progress in this file each major step or milestone
+
+---
+
+# General Flow
+
+1. Analyze  results for output meeting expectations
+2. If failures detected:
+    - Automatically fix issues
+    - Repeat test execution
+3. If all tests pass:
+    - Notify user for review
+    - Update docs after user approval
+4. Proceed through all tasks in the CPS_V4 plan
+5. Systematically log all actions and progress
+
+----------
+New Plan kickoff 6/11/25
+
+Review, think through and confirm understanding of all the md files in this directory
+S:\Dropbox\Scott Only Internal\Quant_Python_24\Backtest_FinAsset_Alloc_Template\docs\CPS_v4
+
+Overview:
+1 We are in middle of V3 to V4 transition - to impose radical simplicity of parameter management and system structure - as we were never able to get control of process and reports in prior version
+2 Need to wrap up transition, setup process to connect the pieces, implement simple controlled loop process to put the V4 pieces together - easy to track and understand for both AI and user
+3 Apply same approaches in #2 to process of generating reports - apply rigorous implementation to report standards documents - no AI "innovation" - just output to specs
+
+I need you to incorporate knowledge of all existing tasks, status and progress and use plan mode for both broad and specific tasks and tasks management.   Concept is user needs control of direction and guidance, but AI can loop for coding fix in turbo-all safetoautorun when doing code fixing and testing
+
+Ask questions then plan - create docs md files - let me know where to view them 
+----------
+Good
+Give me best practice way we can design and implement very simple easy to code and implement - testing of elements along the way
+been very unhappy with prior testing approaches and elements in the past - many lessons learned - included:
+- setting up and implementing the testing took as many shots to fix as it would have in just focusing on code fixing - huge time waste in many cases!
+- AI kept finding problems in code that was fixed in stand alone coding py files, but never properly mapped and fixing in core files - more time waste!
+- AI kept doing very bad loops of running tests wrong in bat + terminal + not setting up logs + not getting the right log output - omg - many different tests - 95% were total wastes of time
+
+How can you - the AI - setup radically simple testing for sub-elements of what we are doing - say isolated - are parameters getting passed correctly from 1 module to another - just that - and fast test, read results, record results
+maybe you have better simple ideas on this?
+
+How to incorporate lessons learned above - OR - is it better to get done a full Phase - then simply try to testing running production models together and have AI design run document fix and run again loop - as in the past with these transitions - had 50 problems - and AI would only find 1 at a time - have conversation, thinking - then try a fix, try another - get a fix - sooo long and wasting so much of my time.   I need to work with you in designing a loop and once loop approved - you go through finding and fixing ALL 50 errors - 1 at a time if needed - without me having to urge you on each time!  Make sense?!

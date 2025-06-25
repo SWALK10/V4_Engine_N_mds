@@ -1,0 +1,18 @@
+Report update Trading requests
+
+Tasks
+1 We need to fix the csv output
+  1a you are duplicating output; note 2 variations of same reports for allocation_history  + for trade_log
+    a version with timestamp, and 1 without; get ride of the ones without the timestamp that have duplicates with the timestamps 
+
+   1b Trade log should have these columns (drop all other columns):
+  trade_log`
+
+- **Columns:** `date`, `ticker`, `action`, `quantity`, `price per share executed`, `total $s`, `execution_date`, `pnl'
+  (action = buy or sell, quantity= # if shares)
+
+- Add a new csv output = equity value, marked to market, daily
+   By day, tickers in columns and grand total on last column
+   Shows total $ value of holdings by date (can add in an additional cash column if need to tie to total actual (not theory) portfolio value by day
+
+- Summary Metrics

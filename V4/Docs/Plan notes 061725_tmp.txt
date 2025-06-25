@@ -1,0 +1,49 @@
+New 
+Here is a plan update - sequence of key steps to be done in this order
+- implement fix - redundant risk_free_rate 
+- and do the step "You should now see the tickers list correctly passed through, and no errors when fetching or joining tickers. Let me know when you’ve applied it and I’ll help confirm it."
+- validate we have new data downloaded, and switch to read mode
+- validate broader sequence of data into backtest engine into output
+- create checklist of all expected elements of ouput 
+
+# Windsurf Cascade Plan
+
+## Notes
+- All validation and output verification must use ONLY the full production code flow (real backtest engine and reporting pipeline).
+- Synthetic/test module validation is discontinued and must NOT be used for any output validation or debugging.
+- All fixes, diagnostics, and verification must be performed in the production pipeline only.
+- When converting any module to CPS v4, always preserve all production logic and business rules in the original file.
+- Only inject the new parameter system (CPS v4) for configuration and parameter flow.
+- Do NOT replace, minimize, or reimplement modules as stubs or simplified versions.
+- For all required parameters, do NOT use `.get(..., fallback)`. All required parameters must be present in CPS v4 settings. If missing, raise an error and halt execution.
+- Only optional/reporting parameters may use `.get(..., fallback)` only if the user reviews and approves on case by case basis.
+
+## Task List
+### Phase 1: CPS V4 Foundation & Core Engine Conversion (IN PROGRESS)
+- [x] Core settings system with consolidated INI file (Task 1.1a, 1.1)
+- [x] Automatic parameter type detection & named list support (Task 1.1a, 1.1)
+- [ ] Module Flow Connection Validation 
+		* Validate Price Data saves and reads
+		* 2. **Integration Tests**: Validate end-to-end workflows with real data.
+- [ ] Ensure all core engine modules are L2 CPS V4 compliant (Part of Task 1.2 / Phase 1 completion)
+
+### Phase 2: V4 Reporting System Implementation & Engine-Reporting Integration Testing (READY TO START)
+- [ ] [Task 2.1] Implement V4 Reporting Modules
+- [ ] Create `v4_reporting` directory structure
+- [ ] Begin implementation of `v4_performance_report.py`
+- [ ] Implement `v4_allocation_report.py`
+
+### Phase 3: Advanced Parameter Structure & GUI Code Conversion (NOT STARTED)
+- [ ] Define tasks for Phase 3
+
+### Phase 4: Full GUI Integration & End-to-End Testing (NOT STARTED)
+- [ ] Define tasks for Phase 4
+
+### Phase 5: Documentation and Production Validation (NOT STARTED)
+- [ ] Define tasks for Phase 5
+
+### Phase 6: Deployment and Verification (NOT STARTED)
+- [ ] Define tasks for Phase 6
+
+## Current Goal
+Complete Phase 1 and start Phase 2 implementation.
